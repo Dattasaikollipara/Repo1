@@ -1,6 +1,6 @@
 {
   "orgName": "sutherland healthcare solutions pvt ltd",
-  "edition": "Unlimited",
+  "edition": "Enterprise",
   "features": ["EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
