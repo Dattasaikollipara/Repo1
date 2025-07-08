@@ -1,3 +1,4 @@
 {
-  "target-dev-hub": "ci-org"
+  "target-dev-hub": "dev-hub-deployment",
+  "target-org": "ci-org"
 }

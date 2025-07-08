@@ -1,3 +1,4 @@
 {
-  "defaultdevhubusername": "ci-org"
+  "defaultdevhubusername": "dev-hub-deployment",
+  "defaultusername": "ci-org"
 }
