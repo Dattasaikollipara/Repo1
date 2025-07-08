@@ -18,6 +18,17 @@ jobs:
           fetch-depth:  0
       - name: npm install
         run: npm install
+        ## Install Salesforce CLI
+        ## Login OR Connect to Salesforce using JWT Token
+        ## Connected Application
+          ## SSL Certificate [Openssl]
+      - name: Install Salesforce CLI
+        run: npm install @salesforce/cli --global
+
+      - name: Authorize with Salesforce org
+        run: sf org login jwt --username kolliparasai987-kspr@force.com --jwt-key-file assets/server.key --client-id 3MVG9RGN2EqkAxhLeFSmxm6zvVoWDzsTA0meU1zJz9sb9SfhAdnT5klMP_YpN5OeIIH6d.fk8d1tv_GrEcByS --set-default --alias ci-org --instance-url https://login.salesforce.com
+      - name: Print User Information
+        run: sf org display user -o ci-org
   clean-up:
     runs-on: ubuntu-latest
     steps:
