@@ -4,10 +4,10 @@ on:
   push:
     paths:
       - 'force-app/**'
-    branches:
-      - feature/*
-      - bugfix/*
-      - hotfix/*
+   # branches:
+    #  - feature/*
+     # - bugfix/*
+      #- hotfix/*
 
 jobs:
   build-and-deploy:
