@@ -15,7 +15,7 @@ on:
     paths:
       - 'force-app/**'
     branches:
-      - main
+      - master
       - uat
       - develop
 
