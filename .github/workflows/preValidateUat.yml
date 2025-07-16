@@ -1,24 +1,12 @@
-name: Dev Pipeline
+name: Pre Validate To UAT Sandbox
 run-name: ${{ github.actor }} is Running the Github Actions
-## Pipeline will be running mainly on 2 events most of time
-## Push, Pull request
 on:
-  push:
-    paths:
-      - 'force-app/**'
-    branches:
-      - feature/*
-      - bugfix/*
-      - hotfix/*
   pull_request:
-    types: [opened, synchronize, reopened,edited]
+    types: [opened, edited, closed]
+    branches:
+      - uat
     paths:
       - 'force-app/**'
-    branches:
-      - master
-      - uat
-      - develop
-
 
 jobs:
   build-and-deploy:
