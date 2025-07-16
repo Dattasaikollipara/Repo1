@@ -2,7 +2,15 @@ name: Dev Pipeline
 run-name: ${{ github.actor }} is Running the Github Actions
 ## Pipeline will be running mainly on 2 events most of time
 ## Push, Pull request
-on: [push, pull_request ]
+on:
+  push:
+    paths:
+      - 'force-app/**'
+  pull_request:
+    types: [opened, synchronize, reopened,edited]
+    paths:
+      - 'force-app/**'
+
 
 jobs:
   build-and-deploy:
