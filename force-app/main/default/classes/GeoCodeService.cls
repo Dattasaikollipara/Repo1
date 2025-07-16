@@ -2,7 +2,6 @@ public with sharing class GeoCodeService {
     
     public with sharing class GeocodeService {
 
-    // Method to geocode a single address
     @future(callout=true)
     public static GeocodeResult geocodeAddress(String address) {
         GeocodeResult result = new GeocodeResult();
